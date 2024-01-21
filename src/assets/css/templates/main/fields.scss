@@ -1,0 +1,99 @@
+@import "variables";
+
+.view-details-field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.view-details-field__title {
+  text-transform: uppercase;
+  font-family: $mainFont;
+  color: $fontColor;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.view-details-field__value {
+  word-break: break-word;
+  font-family: $secondFont;
+  font-size: 14px;
+
+  a {
+    text-decoration: none;
+    color: #80b1f6;
+  }
+}
+
+.view-skill-field {
+  color: $fontColor;
+  font-weight: bold;
+  font-family: $secondFont;
+  font-size: 14px;
+  line-height: 120%;
+  display: flex;
+  padding: 5px 0;
+}
+
+.text-to-list-field__list {
+  padding-left: 15px;
+  gap: 10px;
+  font-family: $mainFont;
+  font-size: 14px;
+
+  li {
+    display: block;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+
+    &:before {
+      color: lighten($fontColor, 20%);
+      content: '•';
+      padding-right: 10px;
+    }
+  }
+}
+
+.view-employment-field {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.view-employment-field__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-employment-field__position,
+.view-employment-field__company,
+.view-education-field__education {
+  color: $fontColor;
+  font-weight: bold;
+  font-family: $mainFont;
+  line-height: 120%;
+  margin-bottom: 5px;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.view-field__date {
+  margin-bottom: 15px;
+  color: lighten($fontColor, 30%);
+  font-weight: 600;
+  font-size: 12px;
+  font-family: $mainFont;
+}
+

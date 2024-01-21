@@ -1,0 +1,16 @@
+@import "templates/main/variables";
+
+* {
+  &::-webkit-scrollbar {
+    width: $scrollbarWidth;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $colorMainDark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorMainLight;
+    border-radius: 20px;
+  }
+}

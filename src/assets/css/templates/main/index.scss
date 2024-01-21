@@ -1,0 +1,58 @@
+@import "fonts";
+@import "variables";
+@import "header";
+@import "sections";
+@import "fields";
+
+
+.view-preview {
+  padding: 40px;
+}
+
+.view-main {
+  display: flex;
+}
+
+.view-left,
+.view-right,
+.view-header {
+  padding: 20px;
+}
+
+.view-right {
+  padding-right: 0;
+}
+
+.view-left {
+  border-right: $border;
+  max-width: 280px;
+  padding-left: 0;
+}
+
+.view-right {
+  flex: 1;
+}
+.view-header {
+  padding-left: 0;
+}
+.view-list > li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.view-right > .view-list > li {
+  border-bottom: $border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+}

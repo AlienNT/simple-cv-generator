@@ -1,0 +1,25 @@
+@import "normalize";
+@import "scrollbar";
+@import "templates/main/variables";
+
+label,
+input,
+textarea {
+  display: flex;
+  flex: 1;
+  border-radius: 5px;
+  font-family: $mainFont;
+  font-size: 14px;
+
+}
+
+textarea {
+  padding: 15px;
+  height: auto;
+}
+
+input, textarea {
+  border: 2px solid #435f84;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

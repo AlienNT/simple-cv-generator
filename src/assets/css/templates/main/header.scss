@@ -1,0 +1,24 @@
+@import "variables";
+
+.view-header {
+  flex: 100%;
+  border-bottom: $border;
+}
+
+.view-header__title {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-family: $secondFont;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 150%;
+}
+
+.view-header__description {
+  font-size: 14px;
+  font-family: $mainFont;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}

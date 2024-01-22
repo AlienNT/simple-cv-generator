@@ -1,8 +1,14 @@
-export const iconsPath = {
-    SHOW: '/assets/icons/show-svgrepo-com.svg',
-    HIDE: '/assets/icons/hide-svgrepo-com.svg',
-    ADD: '/assets/icons/addition-round-svgrepo-com.svg',
-    REMOVE: '/assets/icons/x-round-svgrepo-com.svg',
-    DOWNLOAD: '/assets/icons/download-svgrepo-com.svg',
-    UPLOAD: '/assets/icons/upload-svgrepo-com.svg',
+export const iconPath = '/assets/icons/'
+
+export const iconNames = {
+    SHOW: 'show-svgrepo-com.svg',
+    HIDE: 'hide-svgrepo-com.svg',
+    ADD: 'addition-round-svgrepo-com.svg',
+    REMOVE: 'x-round-svgrepo-com.svg',
+    DOWNLOAD: 'download-svgrepo-com.svg',
+    UPLOAD: 'upload-svgrepo-com.svg',
+}
+
+export function getIcon(iconName) {
+    return iconPath + iconNames[iconName]
 }

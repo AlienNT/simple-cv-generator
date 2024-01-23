@@ -57,7 +57,6 @@ watch(() => form.value, value => {
       </div>
       <div class="field">
         <ImageField
-            :value="image?.file"
             :name="image?.name"
             label="Upload photo"
             @on-input="setImage"

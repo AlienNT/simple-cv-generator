@@ -70,14 +70,15 @@
   }
 }
 
-.view-employment-field__row {
+.view-employment-field__row,
+.view-education-field__row {
   display: flex;
   justify-content: space-between;
 }
 
 .view-employment-field__position,
 .view-employment-field__company,
-.view-education-field__education {
+.view-education-field__education, {
   color: $fontColor;
   font-weight: bold;
   font-family: $mainFont;
@@ -89,6 +90,16 @@
   }
 }
 
+.view-education-field__row {
+  flex-wrap: wrap;
+}
+
+.view-education-field__education-institution {
+  font-family: $mainFont;
+  font-size: 0.875em;
+}
+
+
 .view-field__date {
   margin-bottom: 0.938em;
   color: lighten($fontColor, 30%);
@@ -97,3 +108,20 @@
   font-family: $mainFont;
 }
 
+.view-education-field {
+  margin-bottom: 0.938em;
+  padding-bottom: 0.938em;
+  border-bottom: 2px solid #efefef;
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.view-education-field__education {
+  flex: 1 1 auto;
+}
+.view-education-field__education-institution {
+  flex: 1 1 100%;
+}

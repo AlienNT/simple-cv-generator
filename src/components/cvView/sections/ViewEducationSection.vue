@@ -22,7 +22,7 @@ const sectionData = computed(() => {
           v-for="item in sectionData?.items"
           :dates="item?.[sectionFields.EDUCATION.DATES.name]"
           :speciality="item?.[sectionFields.EDUCATION.SPECIALITY.name]"
-          :education-institution="item?.[sectionFields.EDUCATION.EDUCATIONAL_INSTITUTION]"
+          :education-institution="item?.[sectionFields.EDUCATION.EDUCATIONAL_INSTITUTION.name]"
       />
     </template>
   </ViewSectionTemplate>

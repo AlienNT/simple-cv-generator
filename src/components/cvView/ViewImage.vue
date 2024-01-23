@@ -23,12 +23,16 @@ defineProps({
 <style scoped lang="scss">
 .view-image-wrapper {
   padding-right: 10px;
+  //max-height: 200px;
+  max-width: 200px;
+  display: flex;
 }
 .view-image {
+  display: flex;
   padding: 10px;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
 
   &:before, &:after {
     content: '';

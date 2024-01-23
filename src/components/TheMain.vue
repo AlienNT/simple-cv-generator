@@ -75,6 +75,7 @@ function save() {
 .cv-col {
   flex: 1 1 50%;
   max-height: 100vh;
+  max-width: 100vw;
   overflow-y: scroll;
 
   @media #{$bpLarge} {

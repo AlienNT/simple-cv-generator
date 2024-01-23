@@ -37,7 +37,7 @@ const {cvTitle, cvDescription, image} = useState()
 
 .view-header__col {
   &:nth-of-type(1) {
-    flex: 0 1 280px;
+    flex: none;
   }
 
   &:nth-of-type(2) {

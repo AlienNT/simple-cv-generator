@@ -17,19 +17,18 @@ const props = defineProps({
 
 <template>
   <div class="view-education-field">
-    <div class="view-education-field__education">
+    <div class="view-education-field__row">
       <TextField
+          class="view-education-field__education"
           :value="speciality"
       />
-    </div>
-    <div class="view-education-field__education-institution">
-      <TextField
-          :value="educationInstitution"
-      />
-    </div>
-    <div class="view-education-field__date view-field__date">
       <DateField
+          class="view-education-field__date view-field__date"
           :dates="dates"
+      />
+      <TextField
+          class="view-education-field__education-institution"
+          :value="educationInstitution"
       />
     </div>
   </div>

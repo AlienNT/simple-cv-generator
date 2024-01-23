@@ -19,10 +19,12 @@ const emit = defineEmits(['onInput'])
           :label="label"
           :class="name && 'focused'"
       />
-      <TextField
-          class="image-field__name"
-          :value="name"
-      />
+      <div class="image-field__name-wrapper">
+        <TextField
+            class="image-field__name"
+            :value="name"
+        />
+      </div>
       <FilePicker
           @on-input="e => emit('onInput', e)"
       />
@@ -47,13 +49,22 @@ const emit = defineEmits(['onInput'])
   cursor: pointer;
 }
 
+.image-field__name-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+
 .image-field__name {
-  flex: 1;
   font-family: $mainFont;
   font-size: 14px;
   font-weight: bold;
   color: $fontColor;
-  display: flex;
-  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
 }
 </style>

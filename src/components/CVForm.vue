@@ -36,30 +36,33 @@ watch(() => form.value, value => {
     <div class="cv-form__label">
       Header
     </div>
-    <div class="field">
-      <VField
-          :field-type="fieldTypes.INPUT"
-          :value="cvTitle"
-          label="title"
-          use-label
-          @on-input="setCvTitle"
-      />
-    </div>
-    <div class="field">
-      <VField
-          :field-type="fieldTypes.TEXTAREA"
-          :value="cvDescription"
-          use-label
-          label="description"
-          @on-input="setCvDescription"
-      />
-    </div>
-    <div class="field">
-      <ImageField
-          :value="image?.file"
-          :name="image?.name"
-          @on-input="setImage"
-      />
+    <div class="cv-form-header-fields">
+      <div class="field">
+        <VField
+            :field-type="fieldTypes.INPUT"
+            :value="cvTitle"
+            label="title"
+            use-label
+            @on-input="setCvTitle"
+        />
+      </div>
+      <div class="field">
+        <VField
+            :field-type="fieldTypes.TEXTAREA"
+            :value="cvDescription"
+            use-label
+            label="description"
+            @on-input="setCvDescription"
+        />
+      </div>
+      <div class="field">
+        <ImageField
+            :value="image?.file"
+            :name="image?.name"
+            label="Upload photo"
+            @on-input="setImage"
+        />
+      </div>
     </div>
     <div class="cv-form__label">
       Sections
@@ -122,5 +125,10 @@ watch(() => form.value, value => {
     background: lighten($colorMainLight, 10%);
     border-radius: 5px;
   }
+}
+.cv-form-header-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 </style>

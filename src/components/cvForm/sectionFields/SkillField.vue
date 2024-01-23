@@ -13,7 +13,7 @@ defineProps({
 <template>
   <div class="field">
     <VField
-        :label="sectionFields.SKILLS.TITLE.name"
+        :label="sectionFields.SKILLS.TITLE.label"
         :value="field?.[sectionFields.SKILLS.TITLE.name]"
         use-label
         @on-input="e => field[sectionFields.SKILLS.TITLE.name] = e"

@@ -51,9 +51,23 @@ const isShow = ref(false)
   border-radius: 5px;
   flex: 1;
 
+  &:before {
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background: $colorMainLight;
+    transition: .2s ease;
+  }
+
   @media #{$mouse} {
     &:hover {
-      background: lighten($colorMainLight, 25%);
+      &:before {
+        width: 90%;
+      }
     }
   }
 
@@ -70,6 +84,10 @@ const isShow = ref(false)
   &.open {
     &:after {
       transform: rotateX(180deg);
+    }
+
+    &:before {
+      width: 90%;
     }
   }
 }

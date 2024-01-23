@@ -105,6 +105,7 @@ async function onRemove(id) {
               :field-type="fieldTypes.INPUT"
               :value="sectionTitle"
               label="Section title"
+              class="cv-form-section__title-field"
               use-label
               @on-input="e => section[sectionFields.PROFILE.TITLE.name] = e"
           />
@@ -118,7 +119,10 @@ async function onRemove(id) {
           />
         </div>
         <div class="cv-form-section__items">
-          <ul class="cv-form-section__items-list">
+          <ul
+              v-if="section?.items?.length"
+              class="cv-form-section__items-list"
+          >
             <li v-for="item in section?.items">
               <CVSectionField
                   :component="sectionField.component"
@@ -127,7 +131,10 @@ async function onRemove(id) {
               />
             </li>
           </ul>
-          <div class="add-button">
+          <div
+              v-if="section?.name !== sectionTypes.PROFILE"
+              class="add-button"
+          >
             <AddButton
                 @on-click="addNew"
             />
@@ -202,5 +209,9 @@ async function onRemove(id) {
   &.hide {
     opacity: .6;
   }
+}
+
+.cv-form-section__title-field {
+  margin-bottom: 15px;
 }
 </style>

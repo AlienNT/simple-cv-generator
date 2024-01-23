@@ -11,6 +11,7 @@ export const sectionFields = {
     SKILLS: {
         TITLE: {
             name: 'title',
+            label: 'skill',
             value: null
         }
 
@@ -18,46 +19,56 @@ export const sectionFields = {
     EDUCATION: {
         SPECIALITY: {
             name: 'speciality',
+            label: 'speciality',
             value: null
         },
         EDUCATIONAL_INSTITUTION: {
             name: 'educational institution',
+            label: 'educational institution',
             value: null
         },
         DATES: {
             name: 'dates',
+            label: 'date range',
             value: null
         }
     },
     EMPLOYMENT: {
         POSITION: {
             name: 'position',
+            label: 'position',
             value: null
         },
         COMPANY: {
             name: 'company',
+            label: 'company',
             value: null
         },
         DESCRIPTION: {
             name: 'description',
+            label: 'description',
             value: null
         },
         DATES: {
             name: 'dates',
+            label: 'date range',
             value: null
         },
     },
     DETAILS: {
         TITLE: {
             name: 'title',
+            label: 'title',
             value: null
         },
         VALUE: {
             name: 'value',
+            label: 'value',
             value: null
         },
         TYPE: {
             name: 'type',
+            label: 'type',
             value: null
         }
 
@@ -65,10 +76,12 @@ export const sectionFields = {
     PROFILE: {
         TITLE: {
             name: 'title',
+            label: 'title',
             value: null
         },
         DESCRIPTION: {
             name: 'description',
+            label: 'description',
             value: null
         }
     }

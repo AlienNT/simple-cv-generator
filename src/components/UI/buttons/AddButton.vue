@@ -9,12 +9,14 @@ defineEmits(['onClick'])
 </script>
 
 <template>
-  <div class="add-button-wrapper">
+  <div
+      class="add-button-wrapper"
+      @click="$emit('onClick')"
+  >
     <IconButton
         :icon="iconNames.ADD"
         :color="colors.UI.BUTTONS.ADD.DEFAULT"
         :hover-color="colors.UI.BUTTONS.ADD.HOVER"
-        @on-click="$emit('onClick')"
     />
   </div>
 </template>

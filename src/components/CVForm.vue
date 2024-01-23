@@ -33,6 +33,9 @@ watch(() => form.value, value => {
 
 <template>
   <form class="cv-form">
+    <div class="cv-form__label">
+      Header
+    </div>
     <div class="field">
       <VField
           :field-type="fieldTypes.INPUT"
@@ -58,6 +61,9 @@ watch(() => form.value, value => {
           @on-input="setImage"
       />
     </div>
+    <div class="cv-form__label">
+      Sections
+    </div>
     <div class="field">
       <div
           v-for="section in cvSections"
@@ -72,6 +78,8 @@ watch(() => form.value, value => {
 </template>
 
 <style scoped lang="scss">
+@import "../assets/css/templates/main/variables";
+
 .cv-form {
   display: flex;
   flex-direction: column;
@@ -84,11 +92,35 @@ watch(() => form.value, value => {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 15px;
 
   label {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.cv-form__label {
+  align-items: center;
+  transform: none;
+  font-family: $mainFont;
+  font-weight: bold;
+  color: lighten($colorMainLight, 10%);
+  padding-bottom: 10px;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    max-width: 400px;
+    width: 90%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: lighten($colorMainLight, 10%);
+    border-radius: 5px;
   }
 }
 </style>

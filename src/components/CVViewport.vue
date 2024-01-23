@@ -5,7 +5,7 @@ import {computed, defineAsyncComponent} from "vue";
 const selectTemplate = null
 
 const ViewTemplate = computed(() => {
-  switch (selectTemplate){
+  switch (selectTemplate) {
     default:
       return defineAsyncComponent(() => import('@/components/templates/MainTemplate.vue'))
   }
@@ -20,8 +20,9 @@ const ViewTemplate = computed(() => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .cv-viewport {
   flex: 1;
 }
+
 </style>

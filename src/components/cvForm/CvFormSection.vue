@@ -80,7 +80,6 @@ async function onRemove(id) {
   if (!id) return
 
   const isRemove = await createDialog({title: 'Delete item?'})
-  console.log('isRemove', isRemove)
 
   if (!isRemove) return
 
@@ -101,18 +100,16 @@ async function onRemove(id) {
         </div>
       </template>
       <template v-slot:content>
-        <div
-            v-if="section?.name === sectionTypes.PROFILE"
-            class="profile-fields"
-        >
+        <div class="profile-fields">
           <VField
               :field-type="fieldTypes.INPUT"
               :value="sectionTitle"
-              :label="sectionTitle"
+              label="Section title"
               use-label
               @on-input="e => section[sectionFields.PROFILE.TITLE.name] = e"
           />
           <VField
+              v-if="section?.name === sectionTypes.PROFILE"
               :field-type="fieldTypes.INPUT"
               :value="sectionFields.PROFILE.DESCRIPTION.name"
               :label="sectionFields.PROFILE.DESCRIPTION.name"
@@ -120,10 +117,7 @@ async function onRemove(id) {
               @on-input="e => section[sectionFields.PROFILE.DESCRIPTION.name] = e"
           />
         </div>
-        <div
-            class="cv-form-section__items"
-            v-else
-        >
+        <div class="cv-form-section__items">
           <ul class="cv-form-section__items-list">
             <li v-for="item in section?.items">
               <CVSectionField

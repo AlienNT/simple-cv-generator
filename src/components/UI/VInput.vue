@@ -44,9 +44,6 @@ defineEmits(['onInput', 'onChange'])
   flex: 1;
 }
 
-.label {
-}
-
 .input {
   border-radius: 5px;
   padding-left: 15px;

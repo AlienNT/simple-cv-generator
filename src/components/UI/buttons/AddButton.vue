@@ -70,7 +70,7 @@ $bgColor: #4f914f;
 }
 
 .add-button {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.69);
   cursor: pointer;
   transition: .2s ease;
   padding: 0;

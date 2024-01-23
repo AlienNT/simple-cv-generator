@@ -3,7 +3,7 @@ import TextField from "@/components/UI/TextField.vue";
 import VButton from "@/components/UI/VButton.vue";
 
 import {useDialog} from "@/composables/useDialog.js";
-import {onBeforeUnmount, onMounted, ref} from "vue";
+import {onBeforeUnmount, onMounted} from "vue";
 
 defineProps({
   title: String
@@ -123,13 +123,5 @@ function onKeyDown(e) {
   background: white;
   color: $colorMainLight;
   border: 1px solid $colorMainLight;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-
-.fade-enter-to, .fade-leave-from {
-  opacity: 1;
 }
 </style>

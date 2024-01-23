@@ -18,29 +18,42 @@ const isShow = ref(false)
         <slot name="button"/>
       </div>
     </div>
-    <div
-        v-if="isShow"
-        class="content"
+    <transition
+        name="slide"
+        appear
     >
-      <slot name="content"/>
-    </div>
-
+      <div
+          v-if="isShow"
+          class="content"
+      >
+        <slot name="content"/>
+      </div>
+    </transition>
   </div>
 </template>
 
 <style scoped lang="scss">
 @import "../../assets/css/templates/main/variables";
 @import "../../assets/css/media";
+@import "../../assets/css/animation";
 
 .accordion {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  overflow: hidden;
+  position: relative;
+  min-height: 0;
+  height: auto;
+  transition: .2s ease;
 }
 
 .accordion-row {
   display: flex;
   flex: 1;
+  position: relative;
+  background: #c0c9d4;
+  z-index: 2;
 }
 
 .title-wrapper {
@@ -96,5 +109,9 @@ const isShow = ref(false)
   flex: 0;
   display: flex;
   justify-content: flex-end;
+}
+
+.content {
+  transition: .3s ease;
 }
 </style>

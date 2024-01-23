@@ -1,6 +1,9 @@
 <script setup>
 import {computed} from "vue";
-import {iconsPath} from "@/helpers/icons.js";
+import {iconNames} from "@/helpers/icons.js";
+import {colors} from "@/helpers/colors.js";
+
+import IconButton from "@/components/UI/buttons/IconButton.vue";
 
 const props = defineProps({
   isShow: {
@@ -15,25 +18,21 @@ const props = defineProps({
 
 defineEmits(['onClick'])
 
-const style = computed(() => {
-  return [
-    `mask-image: url(${iconsPath.DOWNLOAD})`,
-  ].join('; ')
-})
 </script>
 
 <template>
-  <div
-      class="save-button-wrapper"
-      @click="$emit('onClick')"
-  >
-    <button
-        type="button"
-        class="save-button"
-        :class="!isShow && 'hide'"
-        :style="style"
-    />
-  </div>
+  <IconButton
+      :icon="iconNames.DOWNLOAD"
+      :color="colors.UI.BUTTONS.DOWNLOAD.DEFAULT"
+      :hover-color="colors.UI.BUTTONS.DOWNLOAD.HOVER"
+      :background-color="colors.APP.DARK.DARKEN"
+      :hover-background-color="colors.APP.DARK.LIGHTEN"
+      :width="40"
+      :height="40"
+      :padding="5"
+      :border-radius="5"
+      @on-click="$emit('onClick')"
+  />
 </template>
 
 <style scoped lang="scss">

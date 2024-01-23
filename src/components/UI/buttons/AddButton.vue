@@ -1,30 +1,27 @@
 <script setup>
-import {computed} from "vue";
-import {iconsPath} from "@/helpers/icons.js";
+import {iconNames} from "@/helpers/icons.js";
+import {colors} from "@/helpers/colors.js";
+
+import IconButton from "@/components/UI/buttons/IconButton.vue";
 
 defineEmits(['onClick'])
-
-const style = computed(() => [
-  `mask-image: url(${iconsPath.ADD})`
-].join('; '))
 
 </script>
 
 <template>
-  <div
-      class="add-button-wrapper"
-      @click="$emit('onClick')"
-  >
-    <button
-        class="add-button"
-        :style="style"
-        type="button"
+  <div class="add-button-wrapper">
+    <IconButton
+        :icon="iconNames.ADD"
+        :color="colors.UI.BUTTONS.ADD.DEFAULT"
+        :hover-color="colors.UI.BUTTONS.ADD.HOVER"
+        @on-click="$emit('onClick')"
     />
   </div>
 </template>
 
 <style scoped lang="scss">
 @import "../../../assets/css/templates/main/variables";
+
 $padding: 20px;
 $bgColor: #4f914f;
 
@@ -46,6 +43,7 @@ $bgColor: #4f914f;
   &:hover {
     padding-left: calc($padding * 2);
     padding-right: 0;
+
     &:before {
       opacity: 1;
     }
@@ -67,12 +65,9 @@ $bgColor: #4f914f;
 }
 
 .add-button {
-  width: 30px;
-  height: 30px;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  background: $bgColor;
+  background: transparent;
   cursor: pointer;
+  transition: .2s ease;
+  padding: 0;
 }
 </style>

@@ -1,28 +1,23 @@
 <script setup>
 
-import {computed} from "vue";
-import {iconsPath} from "@/helpers/icons.js";
+import IconButton from "@/components/UI/buttons/IconButton.vue";
+
+import {iconNames} from "@/helpers/icons.js";
+import {colors} from "@/helpers/colors.js";
 
 defineEmits(['onClick'])
 
-const style = computed(() => {
-  return [
-    `mask-image: url(${iconsPath.UPLOAD})`,
-  ].join('; ')
-})
 </script>
 
 <template>
-  <div
-      class="button-wrapper"
-      @click.stop="$emit('onClick')"
-  >
-    <button
-        class="upload-button"
-        type="button"
-        :style="style"
-    />
-  </div>
+  <IconButton
+      :background-color="colors.UI.BUTTONS.UPLOAD.DEFAULT"
+      :hover-background-color="colors.UI.BUTTONS.UPLOAD.HOVER"
+      :icon="iconNames.UPLOAD"
+      :padding="5"
+      :border-radius="5"
+      color="white"
+  />
 </template>
 
 <style scoped lang="scss">

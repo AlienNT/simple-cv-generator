@@ -1,6 +1,7 @@
 <script setup>
 import {iconPath} from "@/helpers/icons.js";
 import {computed} from "vue";
+import {getStyle} from "@/helpers/getStyle.js";
 
 const props = defineProps({
   iconPath: {
@@ -11,26 +12,16 @@ const props = defineProps({
     type: String,
     default: null
   },
-  width: {
-    type: Number,
-    default: 30
-  },
-  height: {
-    type: Number,
-    default: 30
-  },
   backgroundColor: {
     type: String,
     default: '#2a2a2a'
   }
 })
 
-const style = computed(() => [
-  !!props.icon && `mask-image: url(${props.iconPath + props.icon})`,
-  `width: ${props.width}px`,
-  `height: ${props.height}px`,
-  `background-color: ${props.backgroundColor}`
-])
+const style = computed(() => getStyle({
+  maskImage: !!props.icon && props.iconPath + props.icon,
+  backgroundColor: props.backgroundColor
+}))
 
 </script>
 
@@ -44,5 +35,6 @@ const style = computed(() => [
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
+  flex: 1;
 }
 </style>

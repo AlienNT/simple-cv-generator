@@ -22,6 +22,7 @@ defineEmits(['onClick'])
 
 <style scoped lang="scss">
 @import "../../../assets/css/templates/main/variables";
+@import "../../../assets/css/media";
 
 .button-wrapper {
   cursor: pointer;
@@ -32,11 +33,13 @@ defineEmits(['onClick'])
   border-radius: 5px;
   transition: .2s ease;
 
-  &:hover {
-    background: white;
+  @media #{$mouse} {
+    &:hover {
+      background: white;
 
-    .upload-button {
-      background: darken($colorMainLight, 20%);
+      .upload-button {
+        background: darken($colorMainLight, 20%);
+      }
     }
   }
 }

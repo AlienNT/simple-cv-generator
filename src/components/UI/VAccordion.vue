@@ -30,6 +30,7 @@ const isShow = ref(false)
 
 <style scoped lang="scss">
 @import "../../assets/css/templates/main/variables";
+@import "../../assets/css/media";
 
 .accordion {
   display: flex;
@@ -43,15 +44,17 @@ const isShow = ref(false)
 }
 
 .title-wrapper {
-  padding: 5px 15px;
+  padding: 5px 15px 5px 0;
   cursor: pointer;
   position: relative;
   transition: .2s ease;
   border-radius: 5px;
   flex: 1;
 
-  &:hover {
-    background: lighten($colorMainLight, 25%);
+  @media #{$mouse} {
+    &:hover {
+      background: lighten($colorMainLight, 25%);
+    }
   }
 
   &:after {

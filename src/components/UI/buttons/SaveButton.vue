@@ -37,6 +37,7 @@ defineEmits(['onClick'])
 
 <style scoped lang="scss">
 @import "../../../assets/css/templates/main/variables";
+@import "../../../assets/css/media";
 
 .save-button-wrapper {
   background: lighten($colorMainDark, 5%);
@@ -45,11 +46,13 @@ defineEmits(['onClick'])
   cursor: pointer;
   transition: .2s ease;
 
-  &:hover {
-    background: lighten($colorMainDark, 8%);
+  @media #{$mouse} {
+    &:hover {
+      background: lighten($colorMainDark, 8%);
 
-    .save-button {
-      background: lighten($colorMainLight, 10%);
+      .save-button {
+        background: lighten($colorMainLight, 10%);
+      }
     }
   }
 }

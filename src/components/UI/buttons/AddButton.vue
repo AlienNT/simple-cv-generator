@@ -21,6 +21,7 @@ defineEmits(['onClick'])
 
 <style scoped lang="scss">
 @import "../../../assets/css/templates/main/variables";
+@import "../../../assets/css/media";
 
 $padding: 20px;
 $bgColor: #4f914f;
@@ -40,12 +41,14 @@ $bgColor: #4f914f;
   justify-content: center;
   position: relative;
 
-  &:hover {
-    padding-left: calc($padding * 2);
-    padding-right: 0;
+  @media #{$mouse} {
+    &:hover {
+      padding-left: calc($padding * 2);
+      padding-right: 0;
 
-    &:before {
-      opacity: 1;
+      &:before {
+        opacity: 1;
+      }
     }
   }
 

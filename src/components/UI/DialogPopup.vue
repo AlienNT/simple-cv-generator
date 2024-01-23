@@ -61,6 +61,7 @@ function onKeyDown(e) {
 
 <style scoped lang="scss">
 @import "../../assets/css/templates/main/variables";
+@import "../../assets/css/media";
 
 .dialog-popup {
   top: 0;
@@ -101,16 +102,20 @@ function onKeyDown(e) {
 .button--ok {
   transition: .2s ease;
 
-  &:hover {
-    box-shadow: 2px 2px 4px 0 $colorMainLight;
+  @media #{$mouse} {
+    &:hover {
+      box-shadow: 2px 2px 4px 0 $colorMainLight;
+    }
   }
 }
 
 .button--ok {
   background: $colorMainLight;
 
-  &:hover {
-    background: darken($colorMainLight, 10%);
+  @media #{$mouse} {
+    &:hover {
+      background: darken($colorMainLight, 10%);
+    }
   }
 }
 

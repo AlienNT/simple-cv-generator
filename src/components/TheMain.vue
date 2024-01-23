@@ -56,6 +56,7 @@ function save() {
 
 <style scoped lang="scss">
 @import "../assets/css/templates/main/variables";
+@import "../assets/css/media";
 
 .cv-main {
   max-width: 1400px;
@@ -76,7 +77,7 @@ function save() {
   max-height: 100vh;
   overflow-y: scroll;
 
-  @media all and (max-width: 900px) {
+  @media #{$bpLarge} {
     max-height: unset;
   }
 
@@ -95,13 +96,14 @@ function save() {
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    @media all and (max-width: 768px) {
+
+    @media #{$bpMedium} {
       font-size: 14px;
     }
-    @media all and (max-width: 500px) {
+    @media #{$bpSmall} {
       font-size: 10px;
     }
-    @media all and (max-width: 350px) {
+    @media #{$bpExtraSmall} {
       font-size: 8px;
     }
   }

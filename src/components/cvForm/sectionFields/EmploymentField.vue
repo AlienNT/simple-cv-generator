@@ -16,21 +16,21 @@ const props = defineProps({
     <VField
         :field-type="fieldTypes.INPUT"
         :value="field?.[sectionFields.EMPLOYMENT.POSITION.name]"
-        :label="sectionFields.EMPLOYMENT.POSITION.name"
+        :label="sectionFields.EMPLOYMENT.POSITION.label"
         use-label
         @on-input="e => field[sectionFields.EMPLOYMENT.POSITION.name] = e"
     />
     <VField
         :field-type="fieldTypes.INPUT"
         :value="field?.[sectionFields.EMPLOYMENT.COMPANY.name]"
-        :label="sectionFields.EMPLOYMENT.COMPANY.name"
+        :label="sectionFields.EMPLOYMENT.COMPANY.label"
         use-label
         @on-input="e => field[sectionFields.EMPLOYMENT.COMPANY.name] = e"
     />
     <VField
         :field-type="fieldTypes.TEXTAREA"
         :value="field?.[sectionFields.EMPLOYMENT.DESCRIPTION.name]"
-        :label="sectionFields.EMPLOYMENT.DESCRIPTION.name"
+        :label="sectionFields.EMPLOYMENT.DESCRIPTION.label"
         use-label
         @on-input="e => field[sectionFields.EMPLOYMENT.DESCRIPTION.name] = e"
     />

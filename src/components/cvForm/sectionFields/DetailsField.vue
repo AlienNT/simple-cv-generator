@@ -12,13 +12,13 @@ const props = defineProps({
 <template>
 <div class="field">
   <VField
-      :label="sectionFields.DETAILS.TITLE.name"
+      :label="sectionFields.DETAILS.TITLE.label"
       :value="field?.[sectionFields.DETAILS.TITLE.name]"
       use-label
       @on-input="e => field[sectionFields.DETAILS.TITLE.name] = e"
   />
   <VField
-      :label="sectionFields.DETAILS.VALUE.name"
+      :label="sectionFields.DETAILS.VALUE.label"
       :value="field?.[sectionFields.DETAILS.VALUE.name]"
       use-label
       @on-input="e => field[sectionFields.DETAILS.VALUE.name] = e"

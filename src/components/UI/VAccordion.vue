@@ -41,7 +41,6 @@ const isShow = ref(false)
   display: flex;
   flex-direction: column;
   gap: 15px;
-  overflow: hidden;
   position: relative;
   min-height: 0;
   height: auto;
@@ -51,9 +50,6 @@ const isShow = ref(false)
 .accordion-row {
   display: flex;
   flex: 1;
-  position: relative;
-  background: #c0c9d4;
-  z-index: 2;
 }
 
 .title-wrapper {

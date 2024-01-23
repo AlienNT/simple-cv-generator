@@ -23,6 +23,7 @@ const ViewTemplate = computed(() => {
 <style scoped lang="scss">
 .cv-viewport {
   flex: 1;
+  display: flex;
 }
 
 </style>

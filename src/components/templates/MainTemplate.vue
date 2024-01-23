@@ -65,12 +65,16 @@ const {isShowSection} = useState()
 
 .viewport {
   padding: 0.625em;
+  flex: 1;
+  display: flex;
 }
 
 .view-preview {
   position: relative;
+  flex: 1;
+  height: 100%;
 
-  &:before, &:after {
+  &:before {
     content: '';
     display: block;
     width: 20%;
@@ -83,13 +87,6 @@ const {isShowSection} = useState()
     border-right: 2px solid #efefef;
     top: 0.625em;
     right: 0.625em;
-  }
-
-  &:after {
-    border-bottom: 2px solid #efefef;
-    border-left: 2px solid #efefef;
-    bottom: 0.625em;
-    left: 0.625em;
   }
 }
 </style>

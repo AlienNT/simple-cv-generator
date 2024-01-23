@@ -19,7 +19,7 @@ const isShow = ref(false)
       </div>
     </div>
     <transition
-        name="slide"
+        name="list"
         appear
     >
       <div
@@ -108,6 +108,6 @@ const isShow = ref(false)
 }
 
 .content {
-  transition: .3s ease;
+  transition: .2s ease;
 }
 </style>

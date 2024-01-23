@@ -1,20 +1,20 @@
 @import "variables";
 
 .view-section-title {
-  font-size: 24px;
+  font-size: 1.5em;
   text-transform: uppercase;
   font-family: $secondFont;
   font-weight: bold;
   letter-spacing: 2px;
   line-height: 150%;
   color: $fontColor;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 
   &:after {
     content: '';
     background: #313335;
     display: block;
-    width: 30px;
-    height: 3px;
+    width: 1.875em;
+    height: 0.188em;
   }
 }

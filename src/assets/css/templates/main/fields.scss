@@ -1,10 +1,10 @@
 @import "variables";
 
 .view-details-field {
-  margin-bottom: 15px;
+  margin-bottom: 0.938em;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.125em;
 
   &:last-child {
     margin-bottom: 0;
@@ -15,7 +15,7 @@
   text-transform: uppercase;
   font-family: $mainFont;
   color: $fontColor;
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: bold;
   line-height: 120%;
 }
@@ -23,7 +23,7 @@
 .view-details-field__value {
   word-break: break-word;
   font-family: $secondFont;
-  font-size: 14px;
+  font-size: 0.875em;
 
   a {
     text-decoration: none;
@@ -35,17 +35,17 @@
   color: $fontColor;
   font-weight: bold;
   font-family: $secondFont;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 120%;
   display: flex;
-  padding: 5px 0;
+  padding: 0.313em 0;
 }
 
 .text-to-list-field__list {
-  padding-left: 15px;
-  gap: 10px;
+  padding-left: 0.938em;
+  gap: 0.625em;
   font-family: $mainFont;
-  font-size: 14px;
+  font-size: 0.875em;
 
   li {
     display: block;
@@ -57,13 +57,13 @@
     &:before {
       color: lighten($fontColor, 20%);
       content: '•';
-      padding-right: 10px;
+      padding-right: 0.625em;
     }
   }
 }
 
 .view-employment-field {
-  margin-bottom: 30px;
+  margin-bottom: 1.875em;
 
   &:last-child {
     margin-bottom: 0;
@@ -82,7 +82,7 @@
   font-weight: bold;
   font-family: $mainFont;
   line-height: 120%;
-  margin-bottom: 5px;
+  margin-bottom: 0.313em;
 
   &:first-letter {
     text-transform: uppercase;
@@ -90,10 +90,10 @@
 }
 
 .view-field__date {
-  margin-bottom: 15px;
+  margin-bottom: 0.938em;
   color: lighten($fontColor, 30%);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75em;
   font-family: $mainFont;
 }
 

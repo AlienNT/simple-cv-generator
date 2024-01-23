@@ -3,7 +3,7 @@ import {useState} from "@/composables/useState.js";
 import {watch} from "vue";
 import {fieldTypes} from "@/helpers/fields.js";
 
-import CvFormSection from "@/components/cvForm/CvFormSection.vue";
+import CvFormSection from "@/components/cvForm/CVFormSection.vue";
 import VField from "@/components/UI/VField.vue";
 import ImageField from "@/components/cvForm/sectionFields/ImageField.vue";
 

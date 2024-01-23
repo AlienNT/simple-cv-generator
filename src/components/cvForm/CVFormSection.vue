@@ -10,6 +10,9 @@ import VField from "@/components/UI/VField.vue";
 import CVSectionField from "@/components/cvForm/sectionFields/CVSectionField.vue";
 import ShowButton from "@/components/UI/buttons/ShowButton.vue";
 import AddButton from "@/components/UI/buttons/AddButton.vue";
+import CVFormSectionHeader from "@/components/cvForm/CVFormSectionHeader.vue";
+import CVFormSectionFields from "@/components/cvForm/CVFormSectionFields.vue";
+import CVFormSectionTitle from "@/components/cvForm/CVFormSectionTitle.vue";
 
 const props = defineProps({
   section: {
@@ -95,51 +98,24 @@ async function onRemove(id) {
   <div class="cv-form-section">
     <VAccordion>
       <template v-slot:title>
-        <div class="cv-form-section__title">
-          {{ section?.title || section?.name }}
-        </div>
+        <CVFormSectionTitle
+            :title="section?.title"
+            :name="section?.name"
+        />
       </template>
       <template v-slot:content>
-        <div class="profile-fields">
-          <VField
-              :field-type="fieldTypes.INPUT"
-              :value="sectionTitle"
-              label="Section title"
-              class="cv-form-section__title-field"
-              use-label
-              @on-input="e => section[sectionFields.PROFILE.TITLE.name] = e"
-          />
-          <VField
-              v-if="section?.name === sectionTypes.PROFILE"
-              :field-type="fieldTypes.INPUT"
-              :value="sectionFields.PROFILE.DESCRIPTION.name"
-              :label="sectionFields.PROFILE.DESCRIPTION.name"
-              use-label
-              @on-input="e => section[sectionFields.PROFILE.DESCRIPTION.name] = e"
-          />
-        </div>
-        <div class="cv-form-section__items">
-          <ul
-              v-if="section?.items?.length"
-              class="cv-form-section__items-list"
-          >
-            <li v-for="item in section?.items">
-              <CVSectionField
-                  :component="sectionField.component"
-                  :field="item"
-                  @on-remove="onRemove"
-              />
-            </li>
-          </ul>
-          <div
-              v-if="section?.name !== sectionTypes.PROFILE"
-              class="add-button"
-          >
-            <AddButton
-                @on-click="addNew"
-            />
-          </div>
-        </div>
+        <CVFormSectionHeader
+            :title="sectionTitle"
+            :section="section"
+        />
+        <CVFormSectionFields
+            :field="sectionField"
+            :field-component="sectionField?.component"
+            :fields="section?.items"
+            :section-name="section?.name"
+            @on-add="addNew"
+            @on-remove="onRemove"
+        />
       </template>
       <template v-slot:button>
         <ShowButton
@@ -149,7 +125,6 @@ async function onRemove(id) {
       </template>
     </VAccordion>
   </div>
-
 </template>
 
 <style scoped lang="scss">
@@ -164,54 +139,11 @@ async function onRemove(id) {
   border-radius: 5px;
 }
 
-.cv-form-section__items {
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.cv-form-section__items-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  li {
-    border-radius: 5px;
-    padding: 10px 15px;
-    background: lighten($colorMainLight, 15%);
-    border-bottom: 4px solid darken($colorMainLight, 15%);
-  }
-}
-
-.profile-fields {
-  display: flex;
-  flex-direction: column;
-}
-
-.cv-form-section__title {
-  font-family: monospace;
-  color: #435f84;
-  font-weight: bold;
-  font-size: 16px;
-
-  &:first-letter {
-    text-transform: uppercase;
-  }
-}
-
 .show-button {
   transition: .2s ease;
 
   &.hide {
     opacity: .6;
   }
-}
-
-.cv-form-section__title-field {
-  margin-bottom: 15px;
 }
 </style>

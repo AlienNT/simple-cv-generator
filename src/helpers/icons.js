@@ -1,4 +1,4 @@
-export const iconPath = '/assets/icons/'
+export const iconPath = (import.meta.env.BASE_URL || '') + 'assets/icons/'
 
 export const iconNames = {
     SHOW: 'show-svgrepo-com.svg',

@@ -39,5 +39,7 @@ const emit = defineEmits(['onInput'])
   font-size: 14px;
   font-weight: bold;
   color: $fontColor;
+  display: flex;
+  align-items: center;
 }
 </style>

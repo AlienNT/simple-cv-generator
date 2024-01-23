@@ -64,7 +64,7 @@ const {isShowSection} = useState()
 @import "../../assets/css/templates/main/index";
 
 .viewport {
-  padding: 10px;
+  padding: 0.625em;
 }
 
 .view-preview {
@@ -81,15 +81,15 @@ const {isShowSection} = useState()
   &:before {
     border-top: 2px solid #efefef;
     border-right: 2px solid #efefef;
-    top: 10px;
-    right: 10px;
+    top: 0.625em;
+    right: 0.625em;
   }
 
   &:after {
     border-bottom: 2px solid #efefef;
     border-left: 2px solid #efefef;
-    bottom: 10px;
-    left: 10px;
+    bottom: 0.625em;
+    left: 0.625em;
   }
 }
 </style>

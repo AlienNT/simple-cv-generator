@@ -76,13 +76,17 @@ function save() {
   max-height: 100vh;
   overflow-y: scroll;
 
+  @media all and (max-width: 900px) {
+    max-height: unset;
+  }
+
   &:nth-of-type(1) {
     background: $colorMainDark;
     display: flex;
     padding-top: 15px;
     padding-bottom: 60px;
     flex-direction: column;
-    flex: 1 1 360px;
+    flex: 1 1 320px;
   }
 
   &:nth-of-type(2) {
@@ -90,6 +94,16 @@ function save() {
     background: white;
     display: flex;
     flex-direction: column;
+    font-size: 16px;
+    @media all and (max-width: 768px) {
+      font-size: 14px;
+    }
+    @media all and (max-width: 500px) {
+      font-size: 10px;
+    }
+    @media all and (max-width: 350px) {
+      font-size: 8px;
+    }
   }
 }
 
@@ -98,7 +112,7 @@ function save() {
   bottom: 0;
   left: 0;
   background: $colorMainDark;
-  padding: 15px;
+  padding: 0.9em;
   display: flex;
   justify-content: space-between;
   align-items: center;

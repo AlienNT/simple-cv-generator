@@ -7,7 +7,7 @@ onMounted(() => {
   window.onresize = () => setWindowHeight()
 })
 function setWindowHeight(){
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
+  document.documentElement.style.setProperty('--vh', `${document.documentElement.offsetHeight}px`)
 }
 </script>
 
@@ -17,6 +17,9 @@ function setWindowHeight(){
 
 <style lang="scss">
 @import "assets/css/templates/main/variables";
+html, body {
+  height: 100%;
+}
 #app {
   background: $colorMainDark;
   height: var(--vh, 100vh);

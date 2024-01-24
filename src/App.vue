@@ -19,5 +19,7 @@ function setWindowHeight(){
 @import "assets/css/templates/main/variables";
 #app {
   background: $colorMainDark;
+  height: var(--vh, 100vh);
+  overflow-y: scroll;
 }
 </style>

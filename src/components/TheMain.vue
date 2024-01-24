@@ -62,7 +62,7 @@ function save() {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
+  height: var(--vh, 100vh);
   display: flex;
 }
 
@@ -74,7 +74,7 @@ function save() {
 
 .cv-col {
   flex: 1 1 50%;
-  max-height: 100vh;
+  max-height: var(--vh, 100vh);
   max-width: 100vw;
   overflow-y: scroll;
 

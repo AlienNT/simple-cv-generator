@@ -25,10 +25,6 @@ defineEmits(['onRemove', 'onAdd'])
       class="cv-form-section__items"
   >
     <CVFormSectionFieldsTitle/>
-    <!--    <ul-->
-    <!--        v-if="fields?.length"-->
-    <!--        class="cv-form-section__items-list"-->
-    <!--    >-->
     <transition-group
         v-if="fields?.length"
         tag="ul"
@@ -49,7 +45,6 @@ defineEmits(['onRemove', 'onAdd'])
         />
       </li>
     </transition-group>
-    <!--    </ul>-->
     <AddButton
         v-if="sectionName !== sectionTypes.PROFILE"
         class="add-button"

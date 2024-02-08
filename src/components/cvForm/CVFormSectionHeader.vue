@@ -26,7 +26,7 @@ defineProps({
   <VField
       v-if="section?.['name'] === sectionTypes.PROFILE"
       :field-type="fieldTypes.INPUT"
-      :value="sectionFields.PROFILE.DESCRIPTION.name"
+      :value="section[sectionFields.PROFILE.DESCRIPTION.name]"
       :label="sectionFields.PROFILE.DESCRIPTION.label"
       use-label
       @on-input="e => section[sectionFields.PROFILE.DESCRIPTION.name] = e"
